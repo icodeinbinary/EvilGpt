@@ -2,6 +2,12 @@ import telebot
 from telebot import types
 from groq import Groq
 import random
+import os
+
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+API_TOKEN = os.getenv("API_TOKEN")
+OWNER_CHAT_ID = os.getenv("OWNER_CHAT_ID")
+SECONDARY_BOT_TOKEN = os.getenv("SECONDARY_BOT_TOKEN")
 
 # Instantiate Groq client using the API key
 client = Groq(api_key="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")
